@@ -5,49 +5,49 @@
 /* ── Scania Fonts ──────────────────────────────────────────── */
 @font-face {
   font-family: 'ScaniaSans';
-  src: url('/fonts/ScaniaSans-Regular.woff2') format('woff2');
+  src: url('/jornada-scania-/fonts/ScaniaSans-Regular.woff2') format('woff2');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'ScaniaSans';
-  src: url('/fonts/ScaniaSans-Bold.woff2') format('woff2');
+  src: url('/jornada-scania-/fonts/ScaniaSans-Bold.woff2') format('woff2');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'ScaniaSans';
-  src: url('/fonts/ScaniaSans-Italic.woff2') format('woff2');
+  src: url('/jornada-scania-/fonts/ScaniaSans-Italic.woff2') format('woff2');
   font-weight: 400;
   font-style: italic;
   font-display: swap;
 }
 @font-face {
   font-family: 'ScaniaSansHeadline';
-  src: url('/fonts/ScaniaSansHeadline-Bold.woff2') format('woff2');
+  src: url('/jornada-scania-/fonts/ScaniaSansHeadline-Bold.woff2') format('woff2');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'ScaniaSansHeadline';
-  src: url('/fonts/ScaniaSansHeadline-Regular.woff2') format('woff2');
+  src: url('/jornada-scania-/fonts/ScaniaSansHeadline-Regular.woff2') format('woff2');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'ScaniaSansCondensed';
-  src: url('/fonts/ScaniaSansCondensed-Regular.woff2') format('woff2');
+  src: url('/jornada-scania-/fonts/ScaniaSansCondensed-Regular.woff2') format('woff2');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'ScaniaSansCondensed';
-  src: url('/fonts/ScaniaSansCondensed-Bold.woff2') format('woff2');
+  src: url('/jornada-scania-/fonts/ScaniaSansCondensed-Bold.woff2') format('woff2');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
