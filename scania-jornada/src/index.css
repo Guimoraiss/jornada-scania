@@ -1,0 +1,189 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── Scania Fonts ──────────────────────────────────────────── */
+@font-face {
+  font-family: 'ScaniaSans';
+  src: url('/fonts/ScaniaSans-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'ScaniaSans';
+  src: url('/fonts/ScaniaSans-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'ScaniaSans';
+  src: url('/fonts/ScaniaSans-Italic.woff2') format('woff2');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'ScaniaSansHeadline';
+  src: url('/fonts/ScaniaSansHeadline-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'ScaniaSansHeadline';
+  src: url('/fonts/ScaniaSansHeadline-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'ScaniaSansCondensed';
+  src: url('/fonts/ScaniaSansCondensed-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'ScaniaSansCondensed';
+  src: url('/fonts/ScaniaSansCondensed-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ── Base ──────────────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: 'ScaniaSans', system-ui, -apple-system, sans-serif;
+  background-color: #020F22;
+  color: #FFFFFF;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100dvh;
+  overflow-x: hidden;
+}
+
+#root {
+  min-height: 100dvh;
+}
+
+/* ── Scrollbar ─────────────────────────────────────────────── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #020F22; }
+::-webkit-scrollbar-thumb { background: #0D3B7A; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #1A5FAD; }
+
+/* ── Utility classes ───────────────────────────────────────── */
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg
+           bg-scania-yellow text-scania-blue font-bold font-scania
+           text-base transition-all duration-200
+           hover:bg-yellow-300 hover:scale-105 active:scale-95
+           focus:outline-none focus:ring-2 focus:ring-scania-yellow focus:ring-offset-2 focus:ring-offset-scania-blue
+           disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg
+           border-2 border-scania-blue-light text-scania-blue-light font-bold font-scania
+           text-base transition-all duration-200
+           hover:bg-scania-blue-light hover:text-white hover:scale-105 active:scale-95
+           focus:outline-none focus:ring-2 focus:ring-scania-blue-light;
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 px-4 py-2 rounded-lg
+           text-scania-gray font-scania text-sm transition-all duration-200
+           hover:text-white hover:bg-white/10 active:scale-95
+           focus:outline-none focus:ring-2 focus:ring-white/30;
+  }
+
+  .card-glass {
+    @apply bg-white/5 border border-white/10 rounded-xl backdrop-blur-sm;
+  }
+
+  .card-highlight {
+    @apply bg-scania-blue-mid/30 border border-scania-blue-light/30 rounded-xl;
+  }
+
+  .section-title {
+    @apply font-scania-headline font-bold text-2xl md:text-3xl text-white leading-tight;
+  }
+
+  .tag-badge {
+    @apply inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-bold font-scania uppercase tracking-wider;
+  }
+
+  .progress-bar {
+    @apply h-2 rounded-full bg-scania-blue-mid overflow-hidden;
+  }
+
+  .progress-fill {
+    @apply h-full rounded-full bg-scania-yellow transition-all duration-500 ease-out;
+  }
+
+  .input-field {
+    @apply w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3
+           text-white placeholder-white/40 font-scania text-base
+           focus:outline-none focus:border-scania-yellow focus:bg-white/15
+           transition-all duration-200;
+  }
+
+  .map-node {
+    @apply absolute flex flex-col items-center gap-1 cursor-pointer group transition-all duration-200;
+  }
+
+  .map-node-icon {
+    @apply w-14 h-14 md:w-16 md:h-16 rounded-2xl flex items-center justify-center text-2xl
+           border-2 transition-all duration-200
+           group-hover:scale-110 group-hover:shadow-lg;
+  }
+}
+
+/* ── Road/track line for map ───────────────────────────────── */
+.road-line {
+  position: absolute;
+  background: repeating-linear-gradient(
+    90deg,
+    #FFC000 0px,
+    #FFC000 20px,
+    transparent 20px,
+    transparent 40px
+  );
+  height: 3px;
+  opacity: 0.4;
+}
+
+/* ── Drag & drop styles ────────────────────────────────────── */
+.drag-item {
+  cursor: grab;
+  user-select: none;
+}
+.drag-item:active {
+  cursor: grabbing;
+}
+.drop-zone.drag-over {
+  border-color: #FFC000 !important;
+  background-color: rgba(255, 192, 0, 0.1) !important;
+}
+
+/* ── Reduced motion ────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
